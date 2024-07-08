@@ -88,7 +88,7 @@ section p{
 #testimonials,
 #pricing,
 #faqs{
-    padding: 100px 50px;
+    padding: 100px 20px;
 }
 
 #features header,
@@ -101,20 +101,21 @@ section p{
 
 #services .container-services .element-service,
 .flex-testimonials article{
-    background-color: #1f1f1fcc;
+    background-color: #0d0d0def;
     border: 1px solid grey;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .header-page{
     width: 90%;
     margin: auto;
-    padding: 10px 20px;
-    border: 1px solid grey;
+    padding: 5px 10px;
     margin-top: 20px;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(31, 31, 31, 0.6);
+    background-color: rgba(47, 47, 47, 0.653);
+    box-shadow: 0 0 3px #1d1d1d;
     border-radius: 15px;
     position: sticky;
     position: -webkit-sticky;
@@ -224,7 +225,6 @@ ul.flex-nav1 li a:hover,
 
 /* Principal */
 #principal{
-    padding: 0 30px;
     text-align: center;
     color: white;
     margin-top: 90px;
@@ -236,15 +236,15 @@ ul.flex-nav1 li a:hover,
 .flex-principal{
     gap: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 0 2px rgba(168, 168, 168, 0.585);
+    box-shadow: 0 0 1px rgba(168, 168, 168, 0.585);
     border-radius: 20px;
     padding: 5px 16px;
 }
 .orange{
     color: white;
     background-color: orangered;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px 16px;
+    border-radius: 25px;
 }
 .orange:hover,
 div#buttons-principal a:first-child:hover{
@@ -314,21 +314,23 @@ div#buttons-principal a:last-child:hover{
 }
 /* Sponsors */
 #sponsors{
-    width: 100%;
+    max-width: 60%;
     margin: auto;
     padding: 50px 30px;
     text-align: center;
 }
 #sponsors .flex-sponsors{
+    width: 100%;
     margin-top: 30px;
     justify-content: center;
     gap: 20px;
-    overflow: auto;
-}
-#sponsors .flex-sponsors div{
-    font-weight: bold;
+    overflow: hidden;
 }
 
+#sponsors .flex-sponsors div{
+    flex-shrink: 0;
+    font-weight: bold;  
+}
 /* Avantages */
 #avantages{
     padding: 120px 50px;
@@ -352,6 +354,7 @@ div#buttons-principal a:last-child:hover{
     background-color: #050505;
     box-shadow: 0 0 2px rgba(168, 168, 168, 0.585);
     padding: 30px;
+    border-radius: 10px;
 }
 .element-benefits:hover .gray{
     color: rgb(128, 128, 128);
@@ -383,8 +386,7 @@ div#buttons-principal a:last-child:hover{
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .element-pro-bold{
@@ -405,12 +407,14 @@ div#buttons-principal a:last-child:hover{
 /* Section testimonials */
 #testimonials{
     position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .container-flex-testimonials{
     min-width: 100%;
     width: 80%;
     margin: auto;
-    overflow-x: auto;
+    overflow: hidden;
     margin-top: 50px;
 }
 
@@ -438,7 +442,33 @@ div#buttons-principal a:last-child:hover{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(6, 400px);
-    gap: 20px;
+    gap: 30px;
+}
+
+@keyframes slider{
+    0%,
+    25%{
+        transform: translateX(-100%);
+    }
+    30%,
+    50%{
+        transform: translateX(-200%);
+    }
+    55%,
+    75%{
+        transform: translateX(-300%);
+    }
+    80%,
+    90%{
+        transform: translateX(-400%);
+    }
+    100%{
+        transform: translateX(-500%);
+    }
+}
+.flex-testimonials article{
+    padding: 30px;
+    animation: slider 5s ease-in-out infinite;
 }
 .flex-testimonials-content{
     gap: 20px;
@@ -449,7 +479,7 @@ div#buttons-principal a:last-child:hover{
 .container-pricing{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 .container-pricing article{
@@ -497,7 +527,7 @@ div#buttons-principal a:last-child:hover{
 footer{
     width: 95%;
     margin: 80px auto;
-    padding: 30px;
+    padding: 40px;
     background-color: #050505;
     box-shadow: 0 0 2px gainsboro;
     border-radius: 5px;
@@ -541,6 +571,16 @@ footer{
         gap: 30px;
     }
 
+     /* Features */
+     #features .container-features{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
     /* Pricing */
     .container-pricing{
         margin-top: 50px;
@@ -572,11 +612,31 @@ footer{
         gap: 20px;
     }
 
-    /* Features */
+}
+
+@media all and (max-width: 930px) {
+    #services .container-services{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+      /* Pricing */
+      .container-pricing{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media all and (max-width: 732px) {
+     /* Features */
     #features .container-features{
         margin-top: 50px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 100%;
         justify-content: center;
         align-items: center;
         gap: 60px;
@@ -584,16 +644,6 @@ footer{
 }
 
 @media all and (max-width: 612px) {
-    /* Features */
-    #features .container-features{
-        margin-top: 50px;
-        display: grid;
-        grid-template-columns: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 60px;
-    }
-
     /* Services */
     #services .container-services{
         margin-top: 30px;
@@ -601,18 +651,6 @@ footer{
         grid-template-columns: 100%;
         justify-content: center;
         gap: 30px;
-    }
-
-     /* Pricing */
-     #pricing{
-        padding-left: 20px;
-        padding-right: 20px;
-     }
-     .container-pricing{
-        margin-top: 50px;
-        display: grid;
-        grid-template-columns: 100%;
-        gap: 20px;
     }
 
     /* Footer */
