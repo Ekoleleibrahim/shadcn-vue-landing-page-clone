@@ -394,6 +394,10 @@ div#buttons-principal a:last-child:hover{
     text-align: center;
 }
 
+.icon-feature{
+    filter: drop-shadow(0 0 15px orangered);
+}
+
 /* Services */
 #services .container-services{
     margin-top: 30px;
