@@ -127,9 +127,9 @@ section p{
     position: sticky;
     position: -webkit-sticky;
     top: 20px;
-    z-index: 10000;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    z-index: 5000;
 }
 
 ul.flex-nav1 li a{
@@ -171,16 +171,17 @@ ul.flex-nav1 li a:hover,
 }
 
 #barre-responsive{
-    width: 350px;
-    height: 110vh;
+    width: 300px;
+    height: 100vh;
     padding: 20px;
     background-color: #050505;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     left: -28px;
-    top: -30px;
+    top: -20px;
+    z-index: 5000;
     display: none;
 }
 
@@ -310,7 +311,6 @@ div#buttons-principal a:last-child:hover{
     border-radius: 10px;
     box-shadow: 0 -20px 20px -20px orangered;
     position: relative;
-    z-index: 500;
 }
 
 .flou{
@@ -321,7 +321,7 @@ div#buttons-principal a:last-child:hover{
     right: 0;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    
+    z-index: -300;
     
 }
 /* Sponsors */
