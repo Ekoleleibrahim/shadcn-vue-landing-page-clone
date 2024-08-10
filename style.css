@@ -34,6 +34,9 @@ h3{
     text-transform: capitalize;
     color: white;
 }
+h4{
+    font-size: medium;
+}
 
 p{
     line-height: 1.4;
@@ -168,7 +171,7 @@ ul.flex-nav1 li a:hover,
 }
 
 #barre-responsive{
-    width: 50%;
+    width: 350px;
     height: 110vh;
     padding: 20px;
     background-color: #050505;
@@ -699,5 +702,13 @@ footer{
     
     .container-pricing{
         grid-template-columns: 100%;
+    }
+    #features,
+    #services,
+    #testimonials,
+    #pricing,
+    #faqs,
+    #join-community{
+        padding: 100px 10px;
     }
 }
