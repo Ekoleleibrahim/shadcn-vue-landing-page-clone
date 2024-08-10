@@ -90,7 +90,8 @@ section p{
 #services,
 #testimonials,
 #pricing,
-#faqs{
+#faqs,
+#join-community{
     padding: 100px 20px;
 }
 
@@ -167,7 +168,8 @@ ul.flex-nav1 li a:hover,
 }
 
 #barre-responsive{
-    height: 720px;
+    width: 50%;
+    height: 110vh;
     padding: 20px;
     background-color: #050505;
     display: flex;
@@ -203,7 +205,6 @@ ul.flex-nav1 li a:hover,
     padding: 10px;
     width: 200px;
 }
-
 .flex-responsive li a:hover,
 #barre-responsive .dark div:hover{
     background-color: #2e2e2e8c;
@@ -395,7 +396,7 @@ div#buttons-principal a:last-child:hover{
 }
 
 .icon-feature{
-    filter: drop-shadow(0 0 15px orangered);
+    filter: drop-shadow(0 0 20px orangered);
 }
 
 /* Services */
@@ -515,7 +516,85 @@ div#buttons-principal a:last-child:hover{
     background-color: #cd410f;
 }
 
+/* JOIN COMMUNITY */
+#join-community{
+    text-align: center;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #373737;
+}
+#join-community div.btn-join{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#join-community div a{
+    display: block;
+    width: 300px;
+    text-align: center;
+    color: white;
+    background-color: orangered;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-size: medium;
+}
+#join-community div a:hover{
+    background-color: #cd410f;
+}
+
+
 /* FAQS */
+.container-faqs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.container-faqs + p{
+    margin-top: 20px;
+    color: white;
+}
+.container-faqs article{
+    background-color: #050505;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 8px;
+}
+#open1:checked ~ p,
+#open2:checked ~ p,
+#open2:checked ~ p,
+#open3:checked ~ p,
+#open4:checked ~ p,
+#open5:checked ~ p{
+    display: block;
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+.container-faqs article input{
+    display: none;
+}
+.container-faqs article label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container-faqs article label:hover{
+    text-decoration: underline;
+}
+.container-faqs article p{
+    margin-top: 10px;
+    display: none;
+    opacity: 0;
+    color: gray;
+}
+.contact-us{
+    color: gray;
+    text-decoration: underline;
+}
+.size-6{
+    height: 30px;
+}
 
 
 /* Footer */
@@ -549,14 +628,7 @@ footer{
 }
 
 @media all and (max-width: 1536px) {
-    #principal,
-    #avantages,
-    #features,
-    #services,
-    #testimonials{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+
     #avantages{
         flex-direction: column;
         gap: 20px;
