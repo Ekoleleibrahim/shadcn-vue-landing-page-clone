@@ -334,13 +334,16 @@ div#buttons-principal a:last-child:hover{
     font-size: 20px;
     font-weight: lighter;
 }
-#sponsors .flex-sponsors{
+#sponsors .container-slider{
     max-width: 450px;
     margin: auto;
     margin-top: 30px;
-    justify-content: center;
-    gap: 20px;
     overflow: hidden;
+}
+#sponsors .flex-sponsors{
+    justify-content: center;
+    gap: 30px;
+    
 }
 
 #sponsors .flex-sponsors div{
@@ -571,6 +574,14 @@ div#buttons-principal a:last-child:hover{
     display: block;
     opacity: 1;
     transition: opacity .5s linear;
+}
+#open1:checked,
+#open2:checked,
+#open2:checked,
+#open3:checked,
+#open4:checked,
+#open5:checked{
+    background-color: transparent;
 }
 .container-faqs article input{
     display: none;
